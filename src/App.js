@@ -61,6 +61,8 @@ const PistolGrips = React.lazy(() => import('./pages/items/pistol-grips'));
 const Provisions = React.lazy(() => import('./pages/items/provisions'));
 const Rigs = React.lazy(() => import('./pages/items/rigs'));
 const Suppressors = React.lazy(() => import('./pages/items/suppressors'));
+// Add Muzzle Devices here for page navigation
+const MuzzleDevices = React.lazy(() => import('./pages/items/muzzle-devices'));
 const BsgCategory = React.lazy(() => import('./pages/items/bsg-category'));
 const BitcoinFarmCalculator = React.lazy(() => import('./pages/bitcoin-farm-calculator'));
 const Quests = React.lazy(() => import('./pages/quests'));
@@ -484,6 +486,16 @@ function App() {
                         key="silencer-route"
                         element={[
                             <Navigate to="/items/suppressors" />,
+                            remoteControlSessionElement,
+                        ]}
+                    />
+                    <Route
+                        path={'/items/muzzle-devices'}
+                        key="muzzle-devices-route"
+                        element={[
+                            <Suspense fallback={<Loading />} key="suspense-muzzle-devices-wrapper">
+                                <MuzzleDevices key="muzzle-devices-wrapper" />
+                            </Suspense>,
                             remoteControlSessionElement,
                         ]}
                     />

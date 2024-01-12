@@ -60,6 +60,12 @@
         "type": "suppressor"
     },
     {
+        "key": "muzzle-devices",
+        "displayText": "Muzzle Devices",
+        "icon": "mdiBottleWine",
+        "type": "muzzleDevice"
+    },
+    {
         "key": "grenades",
         "displayText": "Grenades",
         "icon": "mdiGasCylinder",
