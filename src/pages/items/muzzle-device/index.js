@@ -10,7 +10,7 @@ import SmallItemTable from '../../../components/small-item-table';
 
 import useItemsData from '../../../features/items';
 
-function Suppressors() {
+function MuzzleDevices() {
     const [showAllItemSources, setShowAllItemSources] = useState(false);
     const [selectedGun, setSelectedGun] = useState(false);
     const { data: items } = useItemsData();
@@ -35,8 +35,8 @@ function Suppressors() {
 
     return [
         <SEO 
-            title={`${t('Suppressors')} - ${t('Escape from Tarkov')} - ${t('Tarkov.dev')}`}
-            description={t('suppressors-page-description', 'This page includes a sortable table with information on the different types of suppressors available in the game, including their ergonomics, recoil, and cheapest price.')}
+            title={`${t('Muzzle Devices')} - ${t('Escape from Tarkov')} - ${t('Tarkov.dev')}`}
+            description={t('muzzle-devices-page-description', 'This page includes a sortable table with information on the different types of muzzle devices and accompanying attachments available in the game, including their ergonomics, recoil, and cheapest price.')}
             key="seo-wrapper"
         />,
         <div className="display-wrapper" key={'display-wrapper'}>
@@ -44,7 +44,7 @@ function Suppressors() {
                 <h1>
                     {t('Escape from Tarkov')}
                     <Icon path={mdiBottleWine} size={1.5} className="icon-with-text" /> 
-                    {t('Suppressors')}
+                    {t('Muzzle Devices')}
                 </h1>
                 <Filter center>
                     <ToggleFilter
@@ -84,7 +84,9 @@ function Suppressors() {
             </div>
 
             <SmallItemTable
-                typeFilter="suppressor"
+            // WHAT IS API CALL FOR FILTER OF MUZZLE DEVICES
+                typeFilter="mods"
+                nameFilter="muzzle"
                 showAllSources={showAllItemSources}
                 attachesToItemFilter={selectedGun}
                 showAttachTo
@@ -95,14 +97,14 @@ function Suppressors() {
 
             <div className="page-wrapper items-page-wrapper">
                 <p>
-                    {"In Escape from Tarkov, a suppressor is a muzzle device (a functional mod) and can be installed on a weapon to muffle gunshot sound."}
+                    {"In Escape from Tarkov, a muzzle device (a functional mod) can be installed on a weapon to reduce recoil, improve ergonomics, or attach a suppressor to muffle a gunshot sound."}
                 </p>
                 <p>
-                    {"On this page you can sort them buy ergonomics penalty, recoil improvement or their cost and see on which weapon they can be directly mounted."}
+                    {"On this page you can see and sort muzzle devices (all or per weapon) by ergonomics penalty, recoil improvement, or their cost; in addition to the total penalties/improvements of the accopmanying attachments."}
                 </p>
             </div>
         </div>,
     ];
 }
 
-export default Suppressors;
+export default MuzzleDevices;

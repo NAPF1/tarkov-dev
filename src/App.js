@@ -61,8 +61,7 @@ const PistolGrips = React.lazy(() => import('./pages/items/pistol-grips'));
 const Provisions = React.lazy(() => import('./pages/items/provisions'));
 const Rigs = React.lazy(() => import('./pages/items/rigs'));
 const Suppressors = React.lazy(() => import('./pages/items/suppressors'));
-// Add Muzzle Devices here for page navigation
-const MuzzleDevices = React.lazy(() => import('./pages/items/muzzle-devices'));
+const MuzzleDevices = React.lazy(() => import('./pages/items/muzzle-device'));
 const BsgCategory = React.lazy(() => import('./pages/items/bsg-category'));
 const BitcoinFarmCalculator = React.lazy(() => import('./pages/bitcoin-farm-calculator'));
 const Quests = React.lazy(() => import('./pages/quests'));
